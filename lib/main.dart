@@ -4,15 +4,15 @@ void main() {
   runApp(merixo());
 }
 
-const PrimaryColor = const Color(0xFF151026);
-const SecundaryColor = const Color(0xAF0404);
+const PrimaryColor = Color.fromRGBO(0, 0, 0,1);
+const SecundaryColor = Color.fromRGBO(255, 0, 0, 1);
 
 class merixo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: SecundaryColor,
+        backgroundColor: PrimaryColor,
           appBar: AppBar(
             backgroundColor: SecundaryColor,
             title: Text('merixo'),
