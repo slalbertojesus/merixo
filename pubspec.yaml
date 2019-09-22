@@ -57,6 +57,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
+  #   - family: GalanoGrotesque
+  #     fonts:
+  #       - asset: assets/fonts/merixo-font/GalanoGrotesque-Medium.ttf
+  #         style: medium
+  # fonts:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
