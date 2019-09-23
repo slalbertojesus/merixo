@@ -42,7 +42,6 @@ class _InicioSesionState extends State<InicioSesion> {
 class GuiUtils {
 
   static FlatButton buildButton(String buttonIdentifier, BuildContext context){
-
   FlatButton button = new FlatButton(
     child: Text(
       buttonIdentifier),
@@ -54,7 +53,21 @@ class GuiUtils {
       }, 
       color: Color.fromRGBO(253, 23, 23, 1),
   );
-  return button;;
+  return button;
+  }
+
+  static FlatButton buildBackButton(String buttonIdentifier, BuildContext context){
+  FlatButton button = new FlatButton(
+    child: Text(
+      buttonIdentifier),
+      onPressed: () {
+        Navigator.pop(
+              context
+            );
+      }, 
+      color: Color.fromRGBO(253, 23, 23, 1),
+  );
+  return button;
   }
 
 static TextField buildTextField(String textFieldMotive, [String pass]){ 

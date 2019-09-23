@@ -5,7 +5,7 @@ void main() {
   runApp(Merixo());
 }
 
-const PrimaryColor = Color.fromRGBO(0, 0, 0, 1);
+const PrimaryColor = Color.fromRGBO(0, 64, 64, 1);
 const SecundaryColor = Color.fromRGBO(255, 0, 0, 1);
 const Red = Color.fromRGBO(253, 23, 23, 1);
   
@@ -17,7 +17,7 @@ class Merixo extends StatelessWidget {
       title: "Merixp",
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Red, 
+        primaryColor: PrimaryColor, 
         cursorColor: Red,
         accentColor: Red,
         fontFamily: 'Montserrat',
