@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'inicio_sesion.dart';
+import 'package:merixo/inicio_sesion.dart';
 
 void main() {
   runApp(Merixo());
@@ -8,16 +8,17 @@ void main() {
 const PrimaryColor = Color.fromRGBO(0, 64, 64, 1);
 const SecundaryColor = Color.fromRGBO(255, 0, 0, 1);
 const Red = Color.fromRGBO(253, 23, 23, 1);
-  
+    
 
 class Merixo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Merixp",
+      debugShowCheckedModeBanner: false,
+      title: "Merixo",
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: PrimaryColor, 
+        primaryColor: Colors.black, 
         cursorColor: Red,
         accentColor: Red,
         fontFamily: 'Montserrat',
@@ -27,7 +28,7 @@ class Merixo extends StatelessWidget {
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
-      home: new InicioSesion()
+      home: new InicioSesion(),
     );
   }
-  }
+}

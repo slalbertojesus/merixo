@@ -26,19 +26,12 @@ InicioSesion inicio = new InicioSesion();
             style: TextStyle(fontFamily: 'GalanoGrotesque', fontSize: 32)),
       ),
     ),
-    GuiUtils.buildTextField("Usuario"),
-            SizedBox(height: 10.0,),
-    GuiUtils.buildTextField("Contraseña", "PasswordField"),
-            SizedBox(height: 10.0,),
-    GuiUtils.buildTextField("Nombre"),
-            SizedBox(height: 10.0,),
-    GuiUtils.buildTextField("Correo"),
-            SizedBox(height: 10.0,),
+    //agregar botones
     Center(
       child: Column (
           children: <Widget>[
-            GuiUtils.buildButton("Registrate", context),
-            GuiUtils.buildBackButton("Inicia Sesión", context),
+
+            //botones
           ],
       ),
     )

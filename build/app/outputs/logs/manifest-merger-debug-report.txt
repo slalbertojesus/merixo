@@ -5,6 +5,33 @@ INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from C:\merixo\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from [:image_cropper] C:\merixo\build\image_cropper\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:fluttertoast] C:\merixo\build\fluttertoast\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] C:\merixo\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-22:12
+MERGED from [com.github.yalantis:ucrop:2.2.4] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\ucrop-2.2.4.aar\31e2eba32de8e545a721f8f0dc037e85\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\dc7cd91744c8b4e0586b30529cf66a01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0-rc01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\transition-1.2.0-rc01.aar\affdfb95f660ca4952d11ff025b001a0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\5718e835cdff3e357e554f21d1b059ce\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\03a547f54cc21d3fd04013ed6f6941cb\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\ccf3e393305aa618f176da42b845953f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8c29bfeb4407a577f75ba576aa22e54f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\5d1daf07f4a899c58ee992affe5590be\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\933439b9b175af67ab8fcd35ecc49dde\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\3146aa6acb58064bc9203eeaaf7c9474\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\57668462b82e81bc8453ea11bc13bbe8\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\d972ddc4b23fa87a92f200bb72b4aa42\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\exifinterface-1.1.0-beta01.aar\36831f5a10c0ad2eed679fbfa1367851\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d282314d5dee82bbf79a8c5d3a05b7d0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\130164bbc3b7ccbc2900051522f565e3\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\307b322b43b13f6a895f52212bcd87e4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\e7fb6ec46b60d0951ed8e5cab98a9c7d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\61a51d00147b9ef01ffe0b3c4081e14c\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\e08066474325045a10451e3c6cf6d07d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\98695b90772fd7ae5d829fff20b8eca1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\21ba0f13d9c201da883a35410c5f7fdd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\7a1700b881fbc4f680350d92a566a17a\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -24,6 +51,14 @@ INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 		ADDED from C:\merixo\android\app\src\main\AndroidManifest.xml:1:11-69
 application
 ADDED from C:\merixo\android\app\src\main\AndroidManifest.xml:9:5-32:19
+MERGED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-20:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\130164bbc3b7ccbc2900051522f565e3\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\130164bbc3b7ccbc2900051522f565e3\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from C:\merixo\android\app\src\main\AndroidManifest.xml:11:9-31
 	android:icon
@@ -64,6 +99,60 @@ uses-sdk
 INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\merixo\android\app\src\main\AndroidManifest.xml
+MERGED from [:image_cropper] C:\merixo\build\image_cropper\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:image_cropper] C:\merixo\build\image_cropper\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\merixo\build\fluttertoast\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] C:\merixo\build\fluttertoast\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\merixo\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\merixo\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [com.github.yalantis:ucrop:2.2.4] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\ucrop-2.2.4.aar\31e2eba32de8e545a721f8f0dc037e85\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.4] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\ucrop-2.2.4.aar\31e2eba32de8e545a721f8f0dc037e85\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\dc7cd91744c8b4e0586b30529cf66a01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\dc7cd91744c8b4e0586b30529cf66a01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0-rc01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\transition-1.2.0-rc01.aar\affdfb95f660ca4952d11ff025b001a0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0-rc01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\transition-1.2.0-rc01.aar\affdfb95f660ca4952d11ff025b001a0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\5718e835cdff3e357e554f21d1b059ce\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\fragment-1.1.0.aar\5718e835cdff3e357e554f21d1b059ce\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\03a547f54cc21d3fd04013ed6f6941cb\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\appcompat-resources-1.1.0.aar\03a547f54cc21d3fd04013ed6f6941cb\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\ccf3e393305aa618f176da42b845953f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\ccf3e393305aa618f176da42b845953f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8c29bfeb4407a577f75ba576aa22e54f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\8c29bfeb4407a577f75ba576aa22e54f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\5d1daf07f4a899c58ee992affe5590be\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\5d1daf07f4a899c58ee992affe5590be\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\933439b9b175af67ab8fcd35ecc49dde\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\activity-1.0.0.aar\933439b9b175af67ab8fcd35ecc49dde\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\3146aa6acb58064bc9203eeaaf7c9474\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.1.0.aar\3146aa6acb58064bc9203eeaaf7c9474\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\57668462b82e81bc8453ea11bc13bbe8\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.1.0.aar\57668462b82e81bc8453ea11bc13bbe8\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\d972ddc4b23fa87a92f200bb72b4aa42\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\d972ddc4b23fa87a92f200bb72b4aa42\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\a5c9449c298aebf3acd90f51ebb45669\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\exifinterface-1.1.0-beta01.aar\36831f5a10c0ad2eed679fbfa1367851\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.1.0-beta01] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\exifinterface-1.1.0-beta01.aar\36831f5a10c0ad2eed679fbfa1367851\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d282314d5dee82bbf79a8c5d3a05b7d0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d282314d5dee82bbf79a8c5d3a05b7d0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\130164bbc3b7ccbc2900051522f565e3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.1.0.aar\130164bbc3b7ccbc2900051522f565e3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\307b322b43b13f6a895f52212bcd87e4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\307b322b43b13f6a895f52212bcd87e4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\e7fb6ec46b60d0951ed8e5cab98a9c7d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\e7fb6ec46b60d0951ed8e5cab98a9c7d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\61a51d00147b9ef01ffe0b3c4081e14c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\savedstate-1.0.0.aar\61a51d00147b9ef01ffe0b3c4081e14c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\e08066474325045a10451e3c6cf6d07d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\e08066474325045a10451e3c6cf6d07d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\98695b90772fd7ae5d829fff20b8eca1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\98695b90772fd7ae5d829fff20b8eca1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\21ba0f13d9c201da883a35410c5f7fdd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\21ba0f13d9c201da883a35410c5f7fdd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\7a1700b881fbc4f680350d92a566a17a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Beardedfox\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\7a1700b881fbc4f680350d92a566a17a\AndroidManifest.xml:20:5-44
 INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\merixo\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -76,3 +165,27 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\merixo\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\merixo\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:22-78
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker] C:\merixo\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:17-67
