@@ -1,71 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:merixo/registro.dart';
+import 'package:merixo/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'json_objects/loginresponse.dart';
+import 'models/loginresponse.dart';
 import 'package:http/http.dart' as http;
-
-import 'dart:convert';
-
-import 'registro.dart';
 import 'package:merixo/pages/principal.dart';
+import 'dart:convert';
+import 'data/api.dart';
 
 class InicioSesion extends StatefulWidget {
-  InicioSesion({Key key}) : super(key: key);
   @override
   _InicioSesionState createState() => new _InicioSesionState();
 }
 
-class _InicioSesionState extends State<InicioSesion> {
-  SharedPreferences sharedPreferences;
-  final String urlLogin = "http://merixo.tk/login";
-  var loginResponse;
-  bool isLoading;
+class _InicioSesionState extends State<InicioSesion>{
+  BuildContext _context;
+  var _jsonResponse;
+  Map _jsonBody;
+  var _isNull;
+  LoginResponse _responseLogin;
+  bool _isLoading = false; 
+  
 
   @override
   void initState() {
     super.initState();
-    //checkLoginStatus();
-  } 
-  
-  //metodo para checar si existe un token en el caché, si es así. te manda a la página de login}
-  //se elimina si ejecutas sharedPreferences.clear();
-  checkLoginStatus() async {
-    sharedPreferences = await SharedPreferences.getInstance();
-    if(sharedPreferences.getString("token") == null) {
-      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context) =>
-       InicioSesion()), (Route<dynamic> route) => false);
-    }
   }
 
-  signIn(String email, pass) async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    print(email);
-    print(pass);
-    Map data = {'email': email, 'password': pass};
-    var response = await http.post(urlLogin, body: data);
-    if (response.statusCode == 200) {
-      loginResponse = json.decode(response.body);
-      final Map parsed = json.decode(response.body); 
-      final usuario = LoginResponse.fromJson(parsed);
-      if (loginResponse != null) {
-        setState(() {
-          isLoading = false;
-        });
-        sharedPreferences.setString("token", loginResponse['token']);
-        Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Principal()),
-          );
-      }
-    } else {
-      setState(() {
-        isLoading = false;
-      });
-      print(response.body);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,11 +35,36 @@ class _InicioSesionState extends State<InicioSesion> {
         backgroundColor: Colors.black,
         body: Wrap(runSpacing: 20, // to apply margin vertically
             children: <Widget>[
-          headerSection(),
-          textSection(),
-          buttonSection(),
-        ]));
+              headerSection(),
+              textSection(),
+              buttonSection(),
+            ]));
   }
+
+  signIn(String email, pass) async {
+    Map loginCredentials = {'email': email,'password': pass};
+    _jsonResponse = await http.post(RestData.LOGIN_URL, body: loginCredentials);
+    if (_jsonResponse.statusCode == 201) {
+      _isNull = json.decode(_jsonResponse.body);
+      Map _jsonBody = json.decode(_jsonResponse.body); 
+      _responseLogin = LoginResponse.fromJson(_jsonBody);
+      if(_isNull != null) {
+        await Merixo.shareUtils.set("token", _isNull['token']);
+        Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context)
+         => Principal(usuario:_responseLogin)), (Route<dynamic> route) => false);
+        //print(_jsonResponse.body);
+      } else {
+        //error de conexión
+      }
+    } if (_jsonResponse.statusCode == 400){
+      //da errror de datos equivocados
+        print("Hubo un error"+_jsonResponse.body);
+    } else{
+      //da error que no se pudo conectar con el servidor
+        print("Hubo error en servidor"+_jsonResponse.body);
+    } 
+  }
+
 
   final TextEditingController emailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
@@ -140,11 +127,15 @@ class _InicioSesionState extends State<InicioSesion> {
       margin: EdgeInsets.only(top: 15.0),
       child: FlatButton(
         child: Text("Ingresa"),
-        onPressed: () {
+        onPressed: () async {
+          setState(() {
+            _isLoading = true;
+          });
           signIn(emailController.text, passwordController.text);
         },
         color: Color.fromRGBO(253, 23, 23, 1),
       ),
     );
   }
+
 }

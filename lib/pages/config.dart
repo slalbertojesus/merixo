@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
+import 'package:merixo/models/getresponse.dart';
+import 'config_confirmation.dart';
 import 'dart:io';
 
 class Config extends StatefulWidget {
+  final GetResponse usuario;
+  Config({Key key, @required this.usuario}) : super(key: key);
   @override
   _ConfigState createState() => _ConfigState();
 }
 
 class _ConfigState extends State<Config> {
-  double _size = 150.0;
+  final String CHANGE_STATE = "state";
+  final String CHANGE_NAME = "name";
+  double _size = 170.0;
   TabController controller;
   File _imageFile;
+  String userProfilePic = "http://merixo.tk";
 
   Future<void> _pickImage(ImageSource source) async {
     File selected = await ImagePicker.pickImage(source: source);
@@ -39,50 +46,101 @@ class _ConfigState extends State<Config> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Merixo"),
+        title: new Text("Configurar perfil"),
         backgroundColor: Colors.black,
+        actions: <Widget>[ 
+        IconButton( icon: Icon(Icons.people), onPressed: (){} ),],
       ),
-      body: Wrap(children: <Widget>[
-        IconButton(
-            icon: Icon(Icons.add_a_photo),
-            onPressed: () => _pickImage(ImageSource.gallery),
-            ), 
-             Center(
-               child: Container(
-            width: _size,
-            height: _size,
-            decoration: new BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: new DecorationImage(
-                      fit: BoxFit.cover,
-                      image: new NetworkImage(
-                          "http://merixo.tk/media/perfil/choco/robgmail.com-robgmail.com.jpg")
-                  )
-            )
-        ),
-             ),
+      body: Wrap(runSpacing: 10,spacing: 20, children: <Widget>[
+        SizedBox(height: 10),
+        picSection(),
+        infoSection(),
       ]),
     );
   }
-}
 
-        /* if  (_imageFile != null) 
-                Image.file(_imageFile)
-           else  */
-
- 
-  
-/*       return Center(
-        child: new Container(
-            width: _size,
-            height: _size,
-            decoration: new BoxDecoration(
-                shape: BoxShape.circle,
-                image: new DecorationImage(
-                    fit: BoxFit.cover,
-                    image: new NetworkImage(
-                        "https://www.woolha.com/media/2019/06/buneary.jpg")
-                )
+  Container picSection() {
+    return Container(
+      child: Center(
+        child: Container(
+          width: _size,
+          height: _size,
+          decoration: new BoxDecoration(
+              shape: BoxShape.circle,
+              image: new DecorationImage(
+                  fit: BoxFit.cover,
+                  image:
+          new NetworkImage(userProfilePic + widget.usuario.pic))),
+          child: new Stack(children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.add_a_photo, color: Colors.red),
+              onPressed: () => _pickImage(ImageSource.gallery),
             )
+          ]),
         ),
-      ); */
+      ),
+    );
+  }
+
+  Container infoSection() {
+    return Container(
+      child: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            RaisedButton(
+              padding: const EdgeInsets.all(8.0),
+              textColor: Colors.white,
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Confirmation
+                    (usuario:widget.usuario,operation:CHANGE_NAME)),
+                  );
+              },
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.record_voice_over,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    widget.usuario.name,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            RaisedButton(
+              padding: const EdgeInsets.all(8.0),
+              textColor: Colors.white,
+              color: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Confirmation
+                    (usuario:widget.usuario,operation:CHANGE_STATE)),
+                  );
+              },
+              child: Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    widget.usuario.estado,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+}

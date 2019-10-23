@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:merixo/inicio_sesion.dart';
+import 'share/shareutils.dart';
 
 void main() {
   runApp(Merixo());
 }
 
-const PrimaryColor = Color.fromRGBO(0, 64, 64, 1);
-const SecundaryColor = Color.fromRGBO(255, 0, 0, 1);
-const Red = Color.fromRGBO(253, 23, 23, 1);
-    
-
 class Merixo extends StatelessWidget {
+ static ShareUtils shareUtils;
   @override
   Widget build(BuildContext context) {
+    shareUtils = new ShareUtils();
+    shareUtils.instance();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Merixo",
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black, 
-        cursorColor: Red,
-        accentColor: Red,
+        cursorColor: Colors.red,
+        accentColor: Colors.red,
         fontFamily: 'Montserrat',
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
