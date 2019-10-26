@@ -18,7 +18,7 @@ class _InicioSesionState extends State<InicioSesion>{
   BuildContext _context;
   var _jsonResponse;
   Map _jsonBody;
-  var _isNull;
+  var _response;
   LoginResponse _responseLogin;
   bool _isLoading = false; 
   
@@ -45,17 +45,14 @@ class _InicioSesionState extends State<InicioSesion>{
     Map loginCredentials = {'email': email,'password': pass};
     _jsonResponse = await http.post(RestData.LOGIN_URL, body: loginCredentials);
     if (_jsonResponse.statusCode == 201) {
-      _isNull = json.decode(_jsonResponse.body);
+      _response = json.decode(_jsonResponse.body);
       Map _jsonBody = json.decode(_jsonResponse.body); 
       _responseLogin = LoginResponse.fromJson(_jsonBody);
-      if(_isNull != null) {
-        await Merixo.shareUtils.set("token", _isNull['token']);
+      if(_response != null) {
+        await Merixo.shareUtils.set("token", _response['token']);
         Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context)
          => Principal(usuario:_responseLogin)), (Route<dynamic> route) => false);
-        //print(_jsonResponse.body);
-      } else {
-        //error de conexión
-      }
+      } 
     } if (_jsonResponse.statusCode == 400){
       //da errror de datos equivocados
         print("Hubo un error"+_jsonResponse.body);

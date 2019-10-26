@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:merixo/pages/config.dart';
 import 'package:merixo/models/getresponse.dart';
 import 'package:merixo/models/loginresponse.dart';
+import 'package:merixo/share/shareutils.dart';
 import 'package:merixo/data/api.dart';
 import 'dart:convert';
 import 'package:merixo/main.dart';
@@ -22,7 +23,7 @@ class Principal extends StatefulWidget {
 class _PrincipalState extends State<Principal> with SingleTickerProviderStateMixin {
   List<Widget> pages = [Chat(),Feed(),Contacts()];
   TabController controller;
-  final scaffoldKey = new GlobalKey<ScaffoldState>();
+  final _scaffoldKey = new GlobalKey<ScaffoldState>();
   LoginResponse usuario;
   _PrincipalState({this.usuario});
   var _jsonResponse;
@@ -53,12 +54,13 @@ class _PrincipalState extends State<Principal> with SingleTickerProviderStateMix
   }
 
    void _showSnackBar(String text) {
-    scaffoldKey.currentState.showSnackBar(new SnackBar(content: new Text(text)));
+    _scaffoldKey.currentState.showSnackBar(new SnackBar(content: new Text(text)));
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      key: _scaffoldKey,
       appBar: new AppBar(
           title: new Text("Merixo"),
           actions: <Widget>[

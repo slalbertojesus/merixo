@@ -9,8 +9,9 @@ class ShareUtils {
 
   ShareUtils._();
 
-  void instance() async {
+  sharedPreferencesInstance() async {
     shareSave = await SharedPreferences.getInstance();
+    return shareSave;
   }
 
   Future<bool> set(key, value) async {

@@ -3,6 +3,9 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:merixo/models/getresponse.dart';
 import 'config_confirmation.dart';
+import 'package:merixo/share/shareutils.dart';
+import 'package:merixo/inicio_sesion.dart';
+import 'package:merixo/main.dart';
 import 'dart:io';
 
 class Config extends StatefulWidget {
@@ -42,16 +45,26 @@ class _ConfigState extends State<Config> {
     });
   }
 
+  closeSession() async {
+    final preferences = await Merixo.shareUtils.sharedPreferencesInstance();
+    preferences.clear();
+    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context)
+         => InicioSesion()), (Route<dynamic> route) => false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Configurar perfil"),
         backgroundColor: Colors.black,
-        actions: <Widget>[ 
-        IconButton( icon: Icon(Icons.people), onPressed: (){} ),],
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.people), onPressed: () {
+            closeSession();
+          }),
+        ],
       ),
-      body: Wrap(runSpacing: 10,spacing: 20, children: <Widget>[
+      body: Wrap(runSpacing: 10, spacing: 20, children: <Widget>[
         SizedBox(height: 10),
         picSection(),
         infoSection(),
@@ -70,7 +83,7 @@ class _ConfigState extends State<Config> {
               image: new DecorationImage(
                   fit: BoxFit.cover,
                   image:
-          new NetworkImage(userProfilePic + widget.usuario.pic))),
+                      new NetworkImage(userProfilePic + widget.usuario.pic))),
           child: new Stack(children: <Widget>[
             IconButton(
               icon: Icon(Icons.add_a_photo, color: Colors.red),
@@ -95,10 +108,11 @@ class _ConfigState extends State<Config> {
               color: Colors.black,
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Confirmation
-                    (usuario:widget.usuario,operation:CHANGE_NAME)),
-                  );
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Confirmation(
+                          usuario: widget.usuario, operation: CHANGE_NAME)),
+                );
               },
               child: Row(
                 children: <Widget>[
@@ -119,10 +133,11 @@ class _ConfigState extends State<Config> {
               color: Colors.black,
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Confirmation
-                    (usuario:widget.usuario,operation:CHANGE_STATE)),
-                  );
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Confirmation(
+                          usuario: widget.usuario, operation: CHANGE_STATE)),
+                );
               },
               child: Row(
                 children: <Widget>[
@@ -142,5 +157,4 @@ class _ConfigState extends State<Config> {
       ),
     );
   }
-
 }

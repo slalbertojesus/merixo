@@ -11,7 +11,7 @@ class Merixo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     shareUtils = new ShareUtils();
-    shareUtils.instance();
+    shareUtils.sharedPreferencesInstance();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Merixo",
