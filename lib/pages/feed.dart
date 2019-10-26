@@ -64,7 +64,7 @@ class _FeedState extends State<Feed> {
                     itemCount: snapshot.data.length,
                     itemBuilder: (BuildContext context, int index) {
                       Story story = snapshot.data[index];
-                      return _putFeed(story);
+                      return _placeFeed(story);
                     },
                   );
                 }
@@ -75,7 +75,7 @@ class _FeedState extends State<Feed> {
         ));
   }
 
-  Column _putFeed(Story story) {
+  Column _placeFeed(Story story) {
     return Column(
       children: <Widget>[
         Row(
