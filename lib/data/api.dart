@@ -6,5 +6,6 @@ class RestData {
   static final String PROPERTIES_URL = "http://merixo.tk/properties";
   static final String FEED_URL = "http://merixo.tk/getfeed";
   static final String SITE = "http://merixo.tk";
+  static final String ALL_CONTACTS = "http://merixo.tk/getallcontacts";
 
 }

@@ -4,6 +4,7 @@ import 'package:merixo/data/api.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:merixo/main.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'dart:convert';
 
 class Feed extends StatefulWidget {
@@ -23,6 +24,17 @@ class _FeedState extends State<Feed> {
     super.initState();
   }
 
+  
+  final cargando = SpinKitFadingCube(
+  itemBuilder: (BuildContext context, int index) {
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: index.isEven ? Colors.red : Colors.black,
+      ),
+    );
+  },
+);
+
   Future<List<Story>> _getFeed() async {
     final String token = await Merixo.shareUtils.get("token");
     String auth = "Token " + token;
@@ -35,7 +47,6 @@ class _FeedState extends State<Feed> {
       return stories;
     } else {
       _showSnackBar("No se pudo conectar con el servidor");
-      return null;
     }
   }
 
@@ -56,7 +67,7 @@ class _FeedState extends State<Feed> {
                 if (snapshot.data == null) {
                   return Container(
                     child: Center(
-                      child: Text("Cargando..."),
+                      child: cargando,
                     ),
                   );
                 } else {

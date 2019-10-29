@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:merixo/grpc/services/chat_servicio.dart';
 import 'package:merixo/pages/chat.dart';
 import 'package:merixo/pages/contacts.dart';
 import 'package:merixo/pages/feed.dart';
@@ -6,11 +7,12 @@ import 'package:http/http.dart' as http;
 import 'package:merixo/pages/config.dart';
 import 'package:merixo/models/getresponse.dart';
 import 'package:merixo/models/loginresponse.dart';
-import 'package:merixo/share/shareutils.dart';
 import 'package:merixo/data/api.dart';
+import 'package:merixo/grpc/generated_code/chat.pb.dart' as structure;
+import 'package:merixo/grpc/generated_code/chat.pbgrpc.dart' as grpc;
+import 'package:merixo/models/client.dart';
 import 'dart:convert';
 import 'package:merixo/main.dart';
-import 'dart:ui';
 
 
 class Principal extends StatefulWidget {
@@ -40,17 +42,26 @@ class _PrincipalState extends State<Principal> with SingleTickerProviderStateMix
   getUserInfo() async {
     final String token = await Merixo.shareUtils.get("token");
     String auth = "Token " + token;
-    print("Token es "+ auth);
     headers = {'Authorization': auth};
     _jsonResponse = await http.get(RestData.PROPERTIES_URL, headers: headers);
-    print("La respuesta es"+_jsonResponse.body);
     if (_jsonResponse.statusCode == 200) {
       Map _jsonBody = json.decode(_jsonResponse.body); 
       this.responseGet = GetResponse.fromJson(_jsonBody);
-      print("La locación de la foto es: "+responseGet.pic);
+      Client cliente = new Client();
+      cliente.id = responseGet.email;
+      cliente.username = responseGet.username;
+      cliente.estado = true;
+      Subscribirse(cliente);
     } else {
         _showSnackBar("No se pudo conectar con el servidor");
     } 
+  }
+
+    Future<void> Subscribirse(Client cliente) async {
+      Client datos = cliente;
+      print("Se añadió cliente");
+    var res = await ChatAdmin.subscribirse(datos);
+    print(res);
   }
 
    void _showSnackBar(String text) {

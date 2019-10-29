@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:merixo/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'models/loginresponse.dart';
 import 'package:flushbar/flushbar.dart';
@@ -17,12 +16,10 @@ class InicioSesion extends StatefulWidget {
 }
 
 class _InicioSesionState extends State<InicioSesion> {
-  BuildContext _context;
   var _jsonResponse;
   var _response;
   bool _isLoading = false; 
   LoginResponse _responseLogin;
-  Flush _notification;
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -52,19 +49,14 @@ class _InicioSesionState extends State<InicioSesion> {
     )..show(context);
   }
 
-
   signIn(String email, pass) async {
-      print("Entro");
     Map loginCredentials = {'email': email, 'password': pass};
-      print("Checho credenciales");
     _jsonResponse = await http.post(RestData.LOGIN_URL, body: loginCredentials);
     if (_jsonResponse.statusCode == 201) {
-      print("Respuesta");
       _response = json.decode(_jsonResponse.body);
       Map _jsonBody = json.decode(_jsonResponse.body);
       _responseLogin = LoginResponse.fromJson(_jsonBody);
       if (_response != null) {
-      print("Asigó token");
         await Merixo.shareUtils.set("token", _response['token']);
         Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (BuildContext context) 
         => Principal(usuario:_responseLogin)),(Route<dynamic> route) => false);
@@ -77,7 +69,6 @@ class _InicioSesionState extends State<InicioSesion> {
       notification.duration = 2;
        _showFlushbar(context,notification);
     } else {
-      print("Hubo error en servidor" + _jsonResponse.body);
     }
   }
 
