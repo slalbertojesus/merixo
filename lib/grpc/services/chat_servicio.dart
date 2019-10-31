@@ -7,17 +7,19 @@ import 'package:merixo/grpc/generated_code/chat.pbenum.dart';
 import 'package:merixo/grpc/generated_code/chat.pbjson.dart';
 
 class ChatAdmin {
-  static Future<structure.Respuesta> subscribirse(client.Client datos) async{
+  static Future<structure.Respuesta> subscribirse(client.Client datos) async {
+    print('Singleton');
     var client = grpc.ChatAdminClient(GrpcClientSingleton().channel);
-  final usuario = structure.Usuario()
-    ..id = datos.id
-    ..username = datos.username
-    ..estado = datos.estado;
-  final user = structure.CrearUsuarioRequest()
-    ..usuario = usuario;
+    print("utilizó canal desde singleton");
+    final usuario = structure.Usuario()
+      ..id = datos.id
+      ..username = datos.username
+      ..estado = datos.estado;
+    final user = structure.CrearUsuarioRequest()
+      ..usuario = usuario;
     final response = await client.subscribirse(user);
+    print('Entró a suscribirse');
     print('Respuesta de subscripción: ${response.respuesta}');
     return response;
   }
-
 }

@@ -51,13 +51,14 @@ class _PrincipalState extends State<Principal> with SingleTickerProviderStateMix
       cliente.id = responseGet.email;
       cliente.username = responseGet.username;
       cliente.estado = true;
-      Subscribirse(cliente);
+      print("Se creó cliente");
+      subscribirse(cliente);
     } else {
         _showSnackBar("No se pudo conectar con el servidor");
     } 
   }
 
-    Future<void> Subscribirse(Client cliente) async {
+    Future<void> subscribirse(Client cliente) async {
       Client datos = cliente;
       print("Se añadió cliente");
     var res = await ChatAdmin.subscribirse(datos);
